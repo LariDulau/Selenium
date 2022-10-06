@@ -13,18 +13,13 @@ chrome = webdriver.Chrome(service=s)
 # chrome = webdriver.Chrome(serice = Service(ChromeDriverManager().install())
 
 chrome.maximize_window()
-
 chrome.get('https://formy-project.herokuapp.com')
 
 # selector By linktext
-# chrome.find_element(By.LINK_TEXT, 'Autocomplete').click()
+chrome.find_element(By.LINK_TEXT, 'Autocomplete').click()
 
 # selector By partial.linktext
 chrome.find_element(By.PARTIAL_LINK_TEXT, 'Enabled').click()
-
-
-sleep(20)
-
 
 chrome.quit()
 
